@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+				<!-- inicio plataforma -->
+
+				<section>
+					<h1>Solução da Central de Serviços</h1>
+				</section>
+				<section>
+					<section data-background="./img/home.png">
+
+					</section>
+					<section data-background="./img/fundo-plataforma.png">
+						<h1>Plataforma de Autenticação</h1>
+						<h2>Visão estratética</h2>
+					</section>
+
+					<section data-background="./img/fundo-plataforma.png">
+							<h2>Motivação</h2>
+							<ul>
+								<li>Problema de autenticação do INSS</li>
+								<li>Redução de filas do INSS</li>
+							</ul>
+					</section>
+
+					<section data-background="./img/fundo-plataforma.png">
+						<h2>Desafios</h2>
+							<ul>
+								<li>Identificação do usuário
+									<ul>
+										<li>Perguntas (KBA)</li>
+										<li>Presencial</li>
+									</ul>
+								</li>
+								<li>Níveis de concessão de senhas</li>
+								<li>Atendimento ao usuário</li>
+							</ul>
+					</section>
+
+
+					<section data-background="./img/fundo-plataforma.png">
+						<h2>Oportunidade</h2>
+						<ul>
+									<li>Autenticação Governamental</li>
+						</ul>
+					</section>
+				</section>
+
+
+<!-- Fim plataforma -->
+
+<!-- Gateway -->
+
+				<section>
+
+					<section>
+						<h1>Gateway de API</h1>
+						<h2>Visão estratética</h2>
+					</section>
+
+					<section>
+							<h2>Motivação</h2>
+							<ul>
+								<li>Proteger as APIs do Dataprev na internet</li>
+							</ul>
+					</section>
+
+					<section>
+						<h2>Desafios</h2>
+							<ul>
+								<li>Inexistência de solução similar na empresa</li>
+								<li>Falta de expertise corporativa em soluções centradas em
+										<ul>
+											<li>Gateway de APIs</li>
+											<li>Segurança de APIs</li>
+
+										</ul>
+										</li>
+									<li>Integração com solução de mercado (abandonado)</li>
+							</ul>
+					</section>
+					<section>
+
+						<h2>Oportunidade</h2>
+						<ul>
+							<li>
+							Solução de bilhetagem corporativa centralizada</li>
+							<li>Uniformizar os acessos as APIs</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+
+			<!-- fim Gateway -->
+
+			<!-- Meu inss -->
+
+				<section>
+					<section>
+							<h1>Meu INSS </h1>
+							<h2>Visão estratética</h2>
+					</section>
+					<section>
+						<h2>Motivação</h2>
+						<ul>
+							<li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Desafios</h2>
+						<ul>
+							<li>Lidar com tecnologia nova
+								<ul>
+									<li>Sem padrão</li>
+								</ul>
+							</li>
+							<li>Lidar com técnicas novas
+									<ul>
+										<li>UX</li>
+										<li>Usabilidade</li>
+										<li>Design</li>
+									</ul>
+							</li>
+
+						</ul>
+					</section>
+
+					<section>
+						<h2>Oportunidade</h2>
+						<ul>
+							<li>Aumentar a agilidade no deploy de alterações de layout</li>
+							<li>Entregar aplicações voltadas para o cidadão</li>
+							<li>Mobilidade</li>
+						</ul>
+					</section>
+
+				</section>
+
+			<!-- fim Meu inss -->
+
+			<!-- APIS -->
+				<section>
+					<section>
+						<h1>API's</h1>
+						<h2>Visão estratética</h2>
+					</section>
+					<section>
+						<h2>Motivação</h2>
+						<ul>
+							<li>Novo modelo de cobrança baseado em uso das API's</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<!-- FIM APIS -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
