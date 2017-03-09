@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="317.984px" height="275.646px" viewBox="0 0 317.984 275.646" enable-background="new 0 0 317.984 275.646"
+	 xml:space="preserve">
+<g>
+	<text transform="matrix(1 0 0 1 104.3066 177.8804)"><tspan x="0" y="0" fill="#58595B" font-family="'Oswald-Regular'" font-size="59">EXTRATO</tspan><tspan x="0" y="70.8" fill="#58595B" font-family="'Oswald-Regular'" font-size="59">CNIS</tspan></text>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="13.3999" y1="114.2983" x2="161.2134" y2="114.2983">
+			<stop  offset="0" style="stop-color:#F7941E"/>
+			<stop  offset="1" style="stop-color:#FFDE17"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M13.4,44.736c0,0,1.928,92.667,49,173.667c-31-72-25-153-25-153l123.813-28.233l-2.146-26.976
+			L13.4,44.736z"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="40.5024" y1="134.4624" x2="197.4058" y2="134.4624">
+			<stop  offset="0" style="stop-color:#009444"/>
+			<stop  offset="1" style="stop-color:#39B54A"/>
+		</linearGradient>
+		<path fill="url(#SVGID_2_)" d="M41.4,69.548c0,0-9,56.8,30,164.855c-22-89-6.333-143.667-6.333-143.667l132.339-29.203
+			l-2.16-27.011L41.4,69.548z"/>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="63.4468" y1="156.0347" x2="219.5933" y2="156.0347">
+			<stop  offset="0" style="stop-color:#2B3990"/>
+			<stop  offset="1" style="stop-color:#1C75BC"/>
+		</linearGradient>
+		<path fill="url(#SVGID_3_)" d="M68.066,93.736c0,0-17.631,82.76,16.001,156.722c-20.167-79.055,4.666-136.389,4.666-136.389
+			l130.86-24.851l-2.158-27.605L68.066,93.736z"/>
+		<path fill="#FFFFFF" d="M159.213,10.193c0,0-1.166,45.605,14.687,93.209l9-2c-14.343-27-16-93.209-16-93.209L159.213,10.193z"/>
+		<path fill="#FFFFFF" d="M194.907,21.089c0,0-1.166,45.605,14.687,93.209l9-2c-14.344-27-16-93.209-16-93.209L194.907,21.089z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 103.3066 176.8804)"><tspan x="0" y="0" fill="#F1F2F2" font-family="'Oswald-Regular'" font-size="59">EXTRATO</tspan><tspan x="0" y="70.8" fill="#F1F2F2" font-family="'Oswald-Regular'" font-size="59">CNIS</tspan></text>
+</g>
+</svg>

@@ -11,7 +11,9 @@
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="css/chartist.min.css">
+    <script src="js/chartist.min.js"></script>
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -20,771 +22,522 @@
         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
+    <style>
+        video#bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: contain;
+            transition: 1s opacity;
+        }
+        titulo{
+            color: white;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+
+            display: block;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        sub1{
+            color: white;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            display: block;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+        sub2{
+            color: white;
+            text-shadow: 1px 1px 2px rgb(53, 61, 87);
+            display: block;
+            background-color: #1a6091;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            text-align: left;
+            margin-left: 50px;
+            padding: 10px;
+            width: 50%;
+
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+        }
+        sub3{
+            color: white;
+            text-shadow: 1px 1px 2px rgb(53, 61, 87);
+            display: block;
+            background-color: #25914d;
+            font-size: 0.5em;
+            text-transform: uppercase;
+            text-align: left;
+            margin-left: 50px;
+            padding: 10px;
+            width: 50%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+        }
+        subheader{
+            background-image: url("img/vidro-negro.png");
+            padding: 10px;
+            font-size: 0.8em;
+        }
+        *{
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.5em;
+        }
+        .vidro{
+            background-image: url("img/vidro-negro.png");
+            padding: 10px;
+
+        }
+        topico{
+            font-size: 0.8em;
+            text-align: left;
+            display: block;
+            margin-left: 70px;
+        }
+        subtopico{
+            font-size: 0.8em;
+            text-align: left;
+            display: block;
+
+        }
+
+        html.bg .slide-background{
+            background-image: url("img/bgfixo.png");
+            background-size: contain;
+        }
+        html.bg2 .slide-background{
+            background-image: url("img/bg2.png");
+            background-size: contain;
+        }
+        titulo img{
+            border: none!important;
+            box-shadow: none!important;
+            background: none!important;
+            max-width: none!important;
+            max-height: none!important;
+            width:340px!important;
+            height: auto!important;
+        }
+        .reveal section botao{
+            width: 200px;
+            height: 200px;
+            margin: 15px 0px;
+            display: inline-flex;
+            background: rgba(255, 255, 255, 1);
+            border: 4px solid #8699a4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+        }
+
+        .reveal section botao img{
+            border: none!important;
+            box-shadow: none!important;
+            background: none!important;
+            max-width: none!important;
+            max-height: none!important;
+            width:100%!important;
+            height: auto!important;
+            vertical-align: middle;
+        }
+        .reveal section botao a{
+
+        }
+        .ct-chart{
+            width: 100%;
+            overflow: visible;
+        }
+    </style>
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
         <!-- CAPA -->
-        <section>
-            <section data-background="./img/capa.png">
+        <section data-state="bg2">
+            <section>
+            <titulo><img src="img/udrj-logo.svg" alt=""> </titulo>
+            <subheader>Unidade de Desenvolvimento do Rio de Janeiro</subheader>
             </section>
-            <section data-background="./img/fundo-capa.png">
-                <h1>Divisão:</h1>
-                <ul>
-                    <li>Visão Estratégica</li>
-                    <li>Visão de Negócio</li>
-                    <li>Visão de Produto</li>
-                    <li>RoadMap</li>
-                </ul>
+            <section>
+                <sub3>Rosane Moreira Soares <subtopico>Gerente da Unidade</subtopico></sub3>
+                <sub3>Norma Suely Neder Stolet <subtopico>Assessoria</subtopico></sub3>
+
+                <sub3>Leonardo Simões <subtopico>Assessoria Técnica</subtopico></sub3>
+
+                <sub3>Andre Luiz dos Santos <subtopico>Gerente DMP4</subtopico></sub3>
+
+                <sub3>Paulo Ohno dos Reis Nonaka <subtopico>Gerente DMW4</subtopico></sub3>
 
             </section>
+            <section>
+                <sub1>Equipe e Serviços</sub1>
+                <div class="ct-chart"></div>
+                <script>
+                    var chart = new Chartist.Pie('.ct-chart', {
+                    series: [10, 20, 50, 20, 5, 50, 15],
+                    labels: [1, 2, 3, 4, 5, 6, 7]
+                }, {
+                    donut: true,
+                    showLabel: true
+                });
+
+                chart.on('draw', function(data) {
+                    if(data.type === 'slice') {
+                        // Get the total path length in order to use for dash array animation
+                        var pathLength = data.element._node.getTotalLength();
+
+                        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+                        data.element.attr({
+                            'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                        });
+
+                        // Create animation definition while also assigning an ID to the animation for later sync usage
+                        var animationDefinition = {
+                            'stroke-dashoffset': {
+                                id: 'anim' + data.index,
+                                dur: 1000,
+                                from: -pathLength + 'px',
+                                to:  '0px',
+                                easing: Chartist.Svg.Easing.easeOutQuint,
+                                // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+                                fill: 'freeze'
+                            }
+                        };
+
+                        // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+                        if(data.index !== 0) {
+                            animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                        }
+
+                        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+                        data.element.attr({
+                            'stroke-dashoffset': -pathLength + 'px'
+                        });
+
+                        // We can't use guided mode as the animations need to rely on setting begin manually
+                        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+                        data.element.animate(animationDefinition, false);
+                    }
+                });
+
+                // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+                chart.on('created', function() {
+                    if(window.__anim21278907124) {
+                        clearTimeout(window.__anim21278907124);
+                        window.__anim21278907124 = null;
+                    }
+                    window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+                });</script>
+            </section>
+        </section>
+        <section>
+            <sub1>Produtos</sub1>
+            <botao>
+                <a href="#/2"><img src="img/esocial2.png" alt=""></a>
+            </botao>
+            <botao>
+                <a href="#/2"><img src="img/logo-extrato.svg" alt=""></a>
+            </botao>
+            <botao>
+                <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
+            </botao>
+
 
         </section>
-
-
-
-        <!-- inicio plataforma estratégico -->
-
-        <section>
-            <section data-background="./img/home.png">
-
-            </section>
-            <section data-background="./img/fundo-plataforma.png">
-                <h1>Plataforma de Autenticação</h1>
-                <h2>Visão estratética</h2>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Problema de autenticação do INSS</li>
-                    <li>Redução de filas do INSS</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Identificação do usuário
-                        <ul>
-                            <li>Perguntas (KBA)</li>
-                            <li>Presencial</li>
-                        </ul>
-                    </li>
-                    <li>Níveis de concessão de senhas</li>
-                    <li>Atendimento ao usuário</li>
-                </ul>
-            </section>
-
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Autenticação Governamental</li>
-                </ul>
+        <!-- Solução Central de Serviços -->
+        <section data-state = 'bg'>
+            <div>
+                <titulo style="font-size: 3.5em">Solução da</titulo>
+                <titulo>Central de Serviços</titulo>
+            </div>
+        </section>
+        <section data-state = 'bg'>
+            <sub1 >Apresentação</sub1>
+            <p class="fragment fade-left">Visão Estratégica</p>
+            <p class="fragment fade-left">Visão de Negócio</p>
+            <p class="fragment fade-left">Visão de Produto</p>
+            <p class="fragment fade-left">Próximos passos</p>
             </section>
         </section>
 
-        <!--Inicio Gateway estratégico -->
-
         <section>
-
-
-            <section data-background="./img/home-gateway.png">
+            <section data-state = 'bg'>
+                    <titulo>Visão Estratégica</titulo>
+                    <subheader>Visão da Dataprev sobre a solução: Necessidades e Opotunidades</subheader>
             </section>
-            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop">
-            </section>
-            <section data-background="./img/fundo-gateway.png">
-                <h2>Visão Estratégica</h2>
-            </section>
-            <section data-background="./img/fundo-gateway.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Proteger as APIs da Dataprev na internet</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/fundo-gateway.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Inexistência de solução similar na empresa</li>
-                    <li>Falta de expertise corporativa em soluções centradas em:
-                        <ul>
-                            <li>Gateway de APIs</li>
-                            <li>Segurança de APIs</li>
-                        </ul>
-                    </li>
-                    <li>Integração com solução de mercado (abandonado)</li>
-                </ul>
-            </section>
-            <section data-background="./img/fundo-gateway.png">
-
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>
-                        Solução de bilhetagem corporativa centralizada
-                    </li>
-                    <li>Uniformizar os acessos as APIs</li>
-                </ul>
+            <!-- plataforma -->
+            <section data-state = 'bg'>
+                <titulo>Plataforma de autenticação</titulo>
+                <div class="vidro fragment fade-left">
+                    Solução de autenticação e identificação de Cidadão.
+                </div>
 
             </section>
+            <section data-state="bg2">
+                <sub2>Motivação</sub2>
 
-        </section>
+                    <topico>Problema de autenticação do INSS</topico>
+                    <topico>Redução de filas do INSS</topico>
 
+                <sub2>Desafios</sub2>
+                    <topico>Perguntas (KBA)</topico>
+                    <topico>Presencial</topico>
 
-        <!-- Inicio Meu inss estratégico-->
+                    <topico>Níveis de concessão de senhas</topico>
+                    <topico>Atendimento ao usuário</topico>
+                <sub2>Oportunidade</sub2>
+                    <topico>Autenticação Governamental</topico>
 
-        <section>
-            <section data-background="./img/home-inss.png">
             </section>
-            <section data-background="./img/fundo-inss.png">
-                <h1>Meu INSS </h1>
-                <h2>Visão estratética</h2>
+            <!--Gateway -->
+            <section data-state = 'bg'>
+                <titulo>Gateway de API</titulo>
+                <div class="vidro fragment fade-left">
+                    Segurança e controle de acesso
+                </div>
             </section>
-            <section data-background="./img/fundo-inss.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
-                </ul>
-            </section>
+            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop"> </section>
+            <section data-state="bg2">
+                <sub2>Motivação</sub2>
+                <topico> Proteger as APIs da Dataprev na internet </topico>
 
-            <section data-background="./img/fundo-inss.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Lidar com tecnologia nova
-                        <ul>
-                            <li>Sem padrão</li>
-                        </ul>
-                    </li>
-                    <li>Lidar com técnicas novas
-                        <ul>
-                            <li>UX</li>
-                            <li>Usabilidade</li>
-                            <li>Design</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
+                <sub2>Desafios</sub2>
 
-            <section data-background="./img/fundo-inss.png">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Aumentar a agilidade no deploy de alterações de layout</li>
-                    <li>Entregar aplicações voltadas para o cidadão</li>
-                    <li>Mobilidade</li>
-                </ul>
+                <topico>Inexistência de solução similar na empresa</topico>
+                <topico>Fata de expertise:
+                    <topico>Gateway de APIs</topico>
+                    <topico>Segurança de APIs</topico>
+                    <topico>Integração com solução de mercado (abandonado)</topico>
+                </topico>
+
+                <sub2>Oportunidade</sub2>
+                    <topico>Solução de bilhetagem corporativa centralizada</topico>
+                    <topico>Uniformizar os acessos as APIs</topico>
+
+
+
+            </section>
+            <!-- Meu INSS -->
+            <section data-state = 'bg'>
+                <titulo>Meu INSS</titulo>
+                <subheader>Interface Responsiva: Melhoria no acesso e aproximação com o Cliente</subheader>
+
             </section>
 
-        </section>
+            <section data-state = 'bg2'>
+                <sub2>Motivação</sub2>
+                <topico>Melhorar a apresentação dos serviços entregues ao cidadão</topico>
+                <sub2>Desafios</sub2>
+                <topico>Tecnologia nova sem padrão definido</topico>
+                <sub2>Oportunidade</sub2>
+                <topico>Aumentar a agilidade no deploy de alterações de layout</topico>
+                <topico>Entregar aplicações voltadas para o cidadão</topico>
+                <topico>Mobilidade</topico>
+            </section>
 
-        <!-- fim Meu inss estratégico-->
 
-        <!-- APIS estratégico-->
-        <section>
-            <section data-background="./img/home-api.png"></section>
+            <!-- APIs -->
+            <section data-state="bg">
+                <titulo>API's</titulo>
+                <subheader>Regras de Negócio e Funcionalidades</subheader>
+            </section>
             <section data-background-video="./img/apis2.mp4" data-background-video-loop="loop">
             </section>
-            <section data-background="./img/fundo-api.png">
-                <h1>API's</h1>
-                <h2>Visão estratética</h2>
-            </section>
-            <section data-background="./img/fundo-api.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Novo modelo de cobrança baseado em uso das API's</li>
-                    <li>Padronizar o acesso as APIs (contrato)</li>
-                    <li>Fomentar o uso de serviços na casa</li>
-                </ul>
-            </section>
 
-            <section data-background="./img/fundo-api.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Barramento</li>
-                    <li>Governança</li>
-                    <li>Infra (legado)</li>
-                </ul>
+            <section data-state="bg2">
+                <sub2>Motivação</sub2>
+                <topico>Novo modelo de cobrança baseado em uso das API's</topico>
+                <topico>Padronizar o acesso as APIs (contrato)</topico>
+                <topico>Fomentar o uso de serviços na casa</topico>
+                <sub2>Desafios</sub2>
+                <topico>Barramento</topico>
+                <topico>Governança</topico>
+                <topico>Infra (legado)</topico>
+                <sub2>Oportunidades</sub2>
+                <topico>Implantar uma cultura de SOA na casa</topico>
             </section>
-
-
-            <section data-background="./img/fundo-api.png">
-                <h2>Oportunidades</h2>
-                <ul>
-                    <li>Implantar uma cultura de SOA na casa</li>
-                </ul>
-            </section>
-
 
         </section>
-
-        <!--
-
-           Visao de Negócio
-           Visao de Negócio
-           Visao de Negócio
-             Visao de Negócio
-
-       -->
-
-        <!-- inicio plataforma negocio -->
 
         <section>
-            <h1>Visão de Negócio</h1>
-        </section>
-        <section>
-            <section data-background="./img/home.png">
-
-            </section>
-            <section data-background="./img/fundo-plataforma.png">
-                <h1>Plataforma de Autenticação</h1>
-                <h2>Visão de Negócio</h2>
+            <section data-state = 'bg'>
+                <titulo>Visão de Negócio</titulo>
+                <subheader>Posição de Negócio sobre a solução: Pedidos e Demandas</subheader>
             </section>
 
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar relacionamento com o cliente</li>
-                </ul>
+            <section data-state = 'bg'>
+                <sub1>Plataforma</sub1>
+                <sub2>Motivação</sub2>
+                <topico>Melhorar relacionamento com o cliente</topico>
+                <sub2>Desafios</sub2>
+                <topico>Cidadão como cliente do produto</topico>
+                <sub2>Oportunidade</sub2>
+                <topico>Desenvolver aplicações governamentais para o cidadão</topico>
             </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Cidadão como cliente do produto</li>
-                </ul>
+            <section data-state = 'bg2'>
+                <sub2>Contatos</sub2>
+                <topico>Thiago Mendanha</topico>
+                <topico>William Veronesi Rocha (DESC)</topico>
+                <topico>Marina Veloso</topico>
+                <topico>Márcia Bezerra</topico>
+                <topico>Ridai Govinda Pombo (DICA)</topico>
+                <topico>Thiago Almeida</topico>
+                <topico>Fernando Magalhães</topico>
             </section>
-
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Desenvolver aplicações governamentais para o cidadão</li>
-                </ul>
+            <!-- GAteway -->
+            <section data-state = 'bg'>
+                <sub1>Gateway</sub1>
+                <sub2>Desafios</sub2>
+                <topico>Visão de software como serviço</topico>
+                <sub2>Oportunidade</sub2>
+                <topico>Gerar negócios e vender serviços aos clientes</topico>
+                <br/>
             </section>
-
-            <section>
-                <h2>Contatos</h2>
-                <ul>
-                    <li>Thiago Mendanha</li>
-                    <li>William Veronesi Rocha (DESC)</li>
-                    <li>Marina Veloso</li>
-                    <li>Márcia Bezerra</li>
-                    <li>Ridai Govinda Pombo (DICA)</li>
-                    <li>Thiago Almeida</li>
-                    <li>Fernando Magalhães</li>
-                </ul>
+            <section data-state = 'bg2'>
+                <sub2>Contatos</sub2>
             </section>
+            <!-- Meu INSS -->
+            <section data-state = 'bg'>
+                <sub1>Meu INSS</sub1>
+                <sub2>Motivação</sub2>
+                <topico>Melhorar a apresentação dos serviços entregues ao cidadão</topico>
+                <topico>Dar agilidade as demandas de front-end</topico>
+                <topico>Aumentar o numero de serviço oferecidos a DIRAT</topico>
+                <sub2>Desafios</sub2>
+                <topico>Clientes (pessoas) diferentes com demandas diferentes</topico>
+                <topico>Agilidade</topico>
+                <sub2>Oportunidade</sub2>
+                <topico>Provar capacidade</topico>
 
-
-        </section>
-
-
-        <!--Inicio Gateway negocio -->
-
-        <section>
-            <section data-background="./img/gateway-main.jpg">
             </section>
-
-            <section>
-                <h1>Gateway de API</h1>
-                <h2>Visão de Negócio</h2>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Gerar negócios e vender serviços aos clientes</li>
-                </ul>
-            </section>
-        </section>
-
-
-        <!-- Inicio Meu inss negocio-->
-
-        <section>
-            <section>
-                <h1>Meu INSS </h1>
-                <h2>Visão de Negócio</h2>
-            </section>
-            <section>
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
-                    <li>Dar agilidade as demandas de front-end</li>
-                    <li>Aumentar o numero de serviço oferecidos a DIRAT</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Clientes (pessoas) diferentes com demandas diferentes</li>
-                    <li>Agilidade</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Provar capacidade</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Contatos</h2>
-                <ul>
-                    <li>Rafael Rubem</li>
-                    <li>Márcia Bezerra</li>
-                    <li>Pedro Neto</li>
-                    <li>Jorge Lage</li>
-                    <li>Márcia Migues</li>
-                    <li>Alexandre Oliveira</li>
-                    <li>Marina Veloso</li>
-                </ul>
+            <section data-state = 'bg2'>
+                <sub2>Contatos</sub2>
+                <topico>Rafael Rubem</topico>
+                <topico>Márcia Bezerra</topico>
+                <topico>Pedro Neto</topico>
+                <topico>Jorge Lage</topico>
+                <topico>Márcia Migues</topico>
+                <topico>Alexandre Oliveira</topico>
+                <topico>Marina Veloso</topico>
             </section>
 
 
-        </section>
 
 
-        <!--
-
-           Visao de Produto
-           Visao de Produto
-           Visao de Produto
-             Visao de Produto
-
-       -->
-
-
-        <!-- inicio plataforma Produto -->
-
-        <section>
-            <h1>Visão de Produto</h1>
-        </section>
-        <section>
-            <section data-background="./img/home.png">
-
-            </section>
-            <section data-background="./img/fundo-plataforma.png">
-                <h1>Plataforma de Autenticação</h1>
-                <h2>Visão de Produto</h2>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Extrair dados das bases para responder as perguntas (KBA)</li>
-                    <li>Batimento inicial da pessoa com a base do CNIS</li>
-                    <li>Certificado Digital (HTTPS)</li>
-                    <li>Captcha</li>
-                </ul>
-            </section>
-
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desenvolvimento</h2>
-                <ul>
-                    <li>Framework DTP 4.0.5</li>
-                    <li>Primefaces</li>
-                    <li>JPA</li>
-                    <li>Weblogic 12.1.1</li>
-                    <li>Oracle 12c</li>
-                    <li>Ambientes:
-                        <ul>
-                            <li>Nuvem</li>
-                            <li>Homologação</li>
-                            <li>Produção</li>
-                        </ul>
-                    </li>
-                    <li>Módulos: Internet, intranet, negócio, service</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Serviços</h2>
-                <ul>
-                    <li>Gerar token para o Sat</li>
-                    <li>Autenticar</li>
-                    <li>Trocar senha</li>
-                </ul>
-            </section>
-
-
-        </section>
-
-        <!--Inicio Gateway Produto -->
-
-        <section>
-            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop">
-            </section>
-
-            <section data-background="./img/gateway-main.jpg">
-                <h2>Visão de Produto</h2>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Tecnologia</li>
-                    <li>Proficiência</li>
-                    <li>Governança</li>
-                </ul>
-            </section>
-            <section data-background="./img/gateway-sec.jpg">
-
-                <h2>Desenvolvimento</h2>
-                <ul>
-                    <li>Tomcat</li>
-                    <li>Spring Security</li>
-                    <li>Jdk 1.7</li>
-                    <li></li>
-                </ul>
-
-            </section>
-
-        </section>
-
-
-        <!-- Inicio Meu inss Produto-->
-
-        <section>
-            <section>
-                <h1>Meu INSS </h1>
-                <h2>Visão de Produto</h2>
-            </section>
-            <section>
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Lidar com tecnologia nova
-                        <ul>
-                            <li>Sem padrão</li>
-                        </ul>
-                    </li>
-                    <li>Lidar com técnicas novas
-                        <ul>
-                            <li>UX</li>
-                            <li>Usabilidade</li>
-                            <li>Design</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </section>
-
-            <section>
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Aumentar a agilidade no deploy de alterações de layout</li>
-                    <li>Entregar aplicações voltadas para o cidadão</li>
-                    <li>Mobilidade</li>
-                </ul>
-            </section>
-
-        </section>
-
-
-        <!--
-
-           Cenário tecnológico
-           Cenário tecnológico
-           Cenário tecnológico
-             Cenário tecnológico
-
-       -->
-
-
-        <!-- inicio plataforma Cenário tecnológico -->
-
-        <section>
-            <h1>Cenário tecnológico atual</h1>
         </section>
         <section>
-            <section data-background="./img/home.png">
-
-            </section>
-            <section data-background="./img/fundo-plataforma.png">
-                <h1>Plataforma de Autenticação</h1>
-                <h2>Cenário tecnológico atual</h2>
+            <section data-state = 'bg'>
+                <titulo>Visão de Produto</titulo>
+                <subheader>Sobre o Produto: Tecnologia e Desenvolvimento</subheader>
             </section>
 
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Problema de autenticação do INSS</li>
-                    <li>Redução de filas do INSS</li>
-                </ul>
+            <section data-state = 'bg'>
+                <topico>Plataforma de Autenticação</topico>
+                <sub2>Desafios</sub2>
+                    <topico>Extrair dados das bases para responder as perguntas (KBA)</topico>
+                    <topico>Batimento inicial da pessoa com a base do CNIS</topico>
+                    <topico>Certificado Digital (HTTPS)</topico>
+                    <topico>Captcha</topico>
+                <br/>
             </section>
+            <section data-state="bg2">
+                <topico>Plataforma de Autenticação</topico>
+                <sub2>Desenvolvimento</sub2>
 
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Identificação do usuário
-                        <ul>
-                            <li>Perguntas (KBA)</li>
-                            <li>Presencial</li>
-                        </ul>
-                    </li>
-                    <li>Níveis de concessão de senhas</li>
-                    <li>Atendimento ao usuário</li>
-                </ul>
-            </section>
+                    <topico>Framework DTP 4.0.5</topico>
+                    <topico>Primefaces</topico>
+                    <topico>JPA</topico>
+                    <topico>Weblogic 12.1.1</topico>
+                    <topico>Oracle 12c</topico>
+                    <topico>Ambientes:
 
+                            <topico>Desenvolvimento (Nuvem)</topico>
+                            <topico>Homologação</topico>
+                            <topico>Produção</topico>
 
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Autenticação Governamental</li>
-                </ul>
-            </section>
-        </section>
-
-        <!--Inicio Gateway Cenário tecnológico -->
-
-        <section>
-            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop">
-            </section>
-
-            <section data-background="./img/gateway-main.jpg">
-                <h2>Cenário tecnológico atual</h2>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Proteger as APIs do Dataprev na internet</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Inexistência de solução similar na empresa</li>
-                    <li>Falta de expertise corporativa em soluções centradas em
-                        <ul>
-                            <li>Gateway de APIs</li>
-                            <li>Segurança de APIs</li>
-
-                        </ul>
-                    </li>
-                    <li>Integração com solução de mercado (abandonado)</li>
-                </ul>
-            </section>
-            <section data-background="./img/gateway-sec.jpg">
-
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>
-                        Solução de bilhetagem corporativa centralizada
-                    </li>
-                    <li>Uniformizar os acessos as APIs</li>
-                </ul>
+                    </topico>
+                    <topico>Módulos: Internet, intranet, negócio, service</topico>
 
             </section>
+            <section data-state = 'bg'>
+                <topico>Plataforma de Autenticação</topico>
+                <sub2>Serviços</sub2>
 
-        </section>
+                    <topico>Gerar token para o Sat</topico>
+                    <topico>Autenticar</topico>
+                    <topico>Trocar senha</topico>
+                <br/>
+                <br/>
+                <br/>
 
-
-        <!-- Inicio Meu inss Cenário tecnológico-->
-
-        <section>
-            <section>
-                <h1>Meu INSS </h1>
-                <h2>Cenário tecnológico atual</h2>
             </section>
-            <section>
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
-                </ul>
+            <section data-state = 'bg'>
+                <topico>Gateway</topico>
+                <sub2>Desafios</sub2>
+
+                    <topico>Tecnologia</topico>
+                    <topico>Proficiência</topico>
+                    <topico>Governança</topico>
+
+                <sub2>Desenvolvimento</sub2>
+
+                    <topico>Tomcat</topico>
+                    <topico>Spring Security</topico>
+                    <topico>Jdk 1.7</topico>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+            </section>
+            <section data-state="bg">
+                <topico>Meu INSS</topico>
+                <sub2>Desafios</sub2>
+
+                    <topico>Lidar com tecnologia nova
+
+                            <topico>Sem padrão</topico>
+
+                    </topico>
+                    <topico>Lidar com técnicas novas
+
+                            <topico>UX</topico>
+                            <topico>Usabilidade</topico>
+                            <topico>Design</topico>
+
+                    </topico>
+
+                <br>
+                <br>
+
             </section>
 
-            <section>
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Lidar com tecnologia nova
-                        <ul>
-                            <li>Sem padrão</li>
-                        </ul>
-                    </li>
-                    <li>Lidar com técnicas novas
-                        <ul>
-                            <li>UX</li>
-                            <li>Usabilidade</li>
-                            <li>Design</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </section>
-
-            <section>
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Aumentar a agilidade no deploy de alterações de layout</li>
-                    <li>Entregar aplicações voltadas para o cidadão</li>
-                    <li>Mobilidade</li>
-                </ul>
-            </section>
-
-        </section>
-
-
-        <!--
-
-           Roadmap tecnológico
-           Roadmap tecnológico
-           Roadmap tecnológico
-             Roadmap tecnológico
-
-       -->
-
-
-        <!-- inicio plataforma Roadmap tecnológico -->
-
-        <section>
-            <h1>Roadmap Tecnológico</h1>
         </section>
         <section>
-            <section data-background="./img/home.png">
-
-            </section>
-            <section data-background="./img/fundo-plataforma.png">
-                <h1>Plataforma de Autenticação</h1>
-                <h2>Roadmap Tecnológico</h2>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Problema de autenticação do INSS</li>
-                    <li>Redução de filas do INSS</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Identificação do usuário
-                        <ul>
-                            <li>Perguntas (KBA)</li>
-                            <li>Presencial</li>
-                        </ul>
-                    </li>
-                    <li>Níveis de concessão de senhas</li>
-                    <li>Atendimento ao usuário</li>
-                </ul>
-            </section>
-
-
-            <section data-background="./img/fundo-plataforma.png">
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Autenticação Governamental</li>
-                </ul>
+            <section data-state = 'bg'>
+                <titulo>Próximos Passos</titulo>
+                <subheader>RoadMap do produto: Idéias e Visão de Futuro</subheader>
             </section>
         </section>
 
-        <!--Inicio Gateway Roadmap tecnológico -->
-
-        <section>
-            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop">
-            </section>
-
-            <section data-background="./img/gateway-main.jpg">
-                <h2>Roadmap Tecnológico</h2>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Proteger as APIs do Dataprev na internet</li>
-                </ul>
-            </section>
-
-            <section data-background="./img/gateway-sec.jpg">
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Inexistência de solução similar na empresa</li>
-                    <li>Falta de expertise corporativa em soluções centradas em
-                        <ul>
-                            <li>Gateway de APIs</li>
-                            <li>Segurança de APIs</li>
-
-                        </ul>
-                    </li>
-                    <li>Integração com solução de mercado (abandonado)</li>
-                </ul>
-            </section>
-            <section data-background="./img/gateway-sec.jpg">
-
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>
-                        Solução de bilhetagem corporativa centralizada
-                    </li>
-                    <li>Uniformizar os acessos as APIs</li>
-                </ul>
-
-            </section>
-
-        </section>
-
-
-        <!-- Inicio Meu inss Roadmap tecnológico-->
-
-        <section>
-            <section>
-                <h1>Meu INSS </h1>
-                <h2>Roadmap Tecnológico</h2>
-            </section>
-            <section>
-                <h2>Motivação</h2>
-                <ul>
-                    <li>Melhorar a apresentação dos serviços entregues ao cidadão</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Desafios</h2>
-                <ul>
-                    <li>Lidar com tecnologia nova
-                        <ul>
-                            <li>Sem padrão</li>
-                        </ul>
-                    </li>
-                    <li>Lidar com técnicas novas
-                        <ul>
-                            <li>UX</li>
-                            <li>Usabilidade</li>
-                            <li>Design</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </section>
-
-            <section>
-                <h2>Oportunidade</h2>
-                <ul>
-                    <li>Aumentar a agilidade no deploy de alterações de layout</li>
-                    <li>Entregar aplicações voltadas para o cidadão</li>
-                    <li>Mobilidade</li>
-                </ul>
-            </section>
-
-        </section>
 
         <!-- fim divs -->
     </div>
 </div>
+
+<video id="bgvid" playsinline autoplay muted loop>
+    <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+    <source src="./img/2048-4.mp4" type="video/mp4">
+</video>
 
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
