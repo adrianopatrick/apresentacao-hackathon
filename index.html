@@ -337,39 +337,54 @@
 
             </section>
             <section data-state="bg2">
+                <h1></h1>
+                <div data-timeline="welcome.json"></div>
+            </section>
+            <section data-state="bg2">
                 <sub2>Produtos INSS</sub2>
                 <sub3 style="background-color: #446ead">esocial</sub3>
                 <sub3 style="background-color: #446ead">Extrato Cnis</sub3>
                 <sub3 style="background-color: #446ead">Meu INSS</sub3>
-                <sub3 style="background-color: #446ead">SUIBE</sub3>
-                <sub3 style="background-color: #446ead">BG Emprestimo</sub3>
-                <sub3 style="background-color: #446ead">AEPS</sub3>
-            </section>
+                <sub3 style="background-color: #c467c5">SUIBE</sub3>
+                <sub3 style="background-color: #c467c5">BG Emprestimo</sub3>
+                <sub3 style="background-color: #c467c5">AEPS</sub3>
+                <div>
+                    <sub3>Outros
+                        <subtopico>CI, GPS, PJ, CAT</subtopico>
+
+                        <subtopico>COMPREV, TCE II</subtopico>
+
+                        <subtopico>SIGMA, Sala de Monitoramento</subtopico>
+                        <subtopico> GET Serviço Social, DEBCON</subtopico>
+                        <subtopico> DRSCI, Super Triagem <subtopico>
 
 
-            <section>
-                <sub1>Projetos 2017</sub1>
+
+                    </sub3>
+                </div>
+
             </section>
             <section>
-                <sub1>Plataforma de Autenticação</sub1>
-                <p>Sistema de autenticação e identificação do Cidadão</p>
+                <sub2>Projetos do INSS em Andamento</sub2>
+                <sub3>Esocial</sub3>
+                <sub3>Extrato</sub3>
+                <sub3>PJ e Baixa Renda</sub3>
+                <sub3>Central de Serviços</sub3>
+                <sub3>TCE II</sub3>
+                <sub3>BG SUIBE</sub3>
+                <sub3>AEPS</sub3>
+                <sub3>Qualificação de Dados CV3</sub3>
             </section>
+
             <section>
+                <sub2>Projetos Outros Clientes 2017</sub2>
+                <sub3>Plataforma de Autenticação</sub3>
                 <sub3>Painel de Relacionamento com Cliente</sub3>
-                <p>Sistema de autenticação e identificação do Cidadão</p>
-            </section>
-            <section>
-            <sub3>GESCON - Gestão de Consultas RPPS</sub3>
-                <p>Sistema de autenticação e identificação do Cidadão</p>
-            </section>
-            <section>
+                <sub3>GESCON - Gestão de Consultas RPPS</sub3>
                 <sub3>SDC CV3</sub3>
-                <p>Sistema de autenticação e identificação do Cidadão</p>
-            </section>
-            <section>
                 <sub3>Projeto RFB 2017</sub3>
-                <p>Sistema de autenticação e identificação do Cidadão</p>
             </section>
+
         </section>
         <section>
             <sub1>Produtos</sub1>
@@ -382,28 +397,10 @@
             <botao>
                 <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
             </botao>
-            <canvas data-chart="line">
-                <!--
-                {
-                 "data": {
-                  "labels": ["January"," February"," March"," April"," May"," June"," July"],
-                  "datasets": [
-                   {
-                    "data":[65,59,80,81,56,55,40],
-                    "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
-                   },
-                   {
-                    "data":[28,48,40,19,86,27,90],
-                    "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
-                   }
-                  ]
-                 },
-                 "options": { "responsive": "true" }
-                }
-                -->
-            </canvas>
+
 
         </section>
+
         <!-- Solução Central de Serviços -->
         <section data-state = 'bg'>
             <div>
@@ -413,13 +410,24 @@
         </section>
         <section data-state = 'bg'>
             <sub1 >Apresentação</sub1>
+            <p class="fragment fade-left">Visão Geral</p>
             <p class="fragment fade-left">Visão Estratégica</p>
             <p class="fragment fade-left">Visão de Negócio</p>
             <p class="fragment fade-left">Visão de Produto</p>
             <p class="fragment fade-left">Próximos passos</p>
             </section>
         </section>
-
+        <section>
+            <section>
+                <sub1>Visão Geral</sub1>
+            </section>
+            <section>
+                Plataforma de autenticação
+            </section>
+            <section>
+                Meu INSS
+            </section>
+        </section>
         <section>
             <section data-state = 'bg'>
                     <titulo>Visão Estratégica</titulo>
@@ -522,7 +530,6 @@
             </section>
 
         </section>
-
         <section>
             <section data-state = 'bg'>
                 <titulo>Visão de Negócio</titulo>
@@ -707,8 +714,9 @@
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},
-            { src: 'plugin/chart/Chart.min.js' },
-            { src: 'plugin/chart/csv2chart.js' },
+            {src: 'plugin/chart/Chart.min.js' },
+            {src: 'plugin/chart/csv2chart.js' },
+            {src: 'js/reveal-timeline.js' },
             {src: 'plugin/notes/notes.js', async: true},
             {
                 src: 'plugin/highlight/highlight.js', async: true, callback: function () {
