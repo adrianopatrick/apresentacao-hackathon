@@ -12,8 +12,8 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link rel="stylesheet" href="css/chartist.min.css">
-    <script src="js/chartist.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -77,7 +77,7 @@
             text-align: left;
             margin-left: 50px;
             padding: 10px;
-            width: 50%;
+            width: 40%;
             margin-bottom: 10px;
             margin-top: 10px;
 
@@ -148,6 +148,32 @@
             height: auto!important;
             vertical-align: middle;
         }
+        .grafico{
+            border: none!important;
+            background: rgba(255, 255, 255, 0.73) !important;
+            max-width: none!important;
+            max-height: none!important;
+            width:100%!important;
+            height: auto!important;
+            vertical-align: middle;
+        }
+        .reveal section vitrine{
+            width: 200px;
+            height: 114px;
+            margin: 15px 0px;
+            display: inline-flex;
+            background: rgba(255, 255, 255, 1);
+            border: 4px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: 45%;
+            padding: 0;
+
+        }
+
         .reveal section botao a{
 
         }
@@ -155,18 +181,36 @@
             width: 100%;
             overflow: visible;
         }
+        canvas{
+            display: inline!important;
+            height: auto!important;
+            width: 70% !important;
+            position: absolute;
+        }
+        .grafw{
+            background-color: rgba(255,255,255,0.8)!important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            height: 96%!important;
+            width: 36% !important;
+            position: absolute!important;
+            right: 113px!important;
+            top: 103px!important;
+        }
+
+
     </style>
+
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
         <!-- CAPA -->
-        <section data-state="bg2">
-            <section>
+        <section >
+            <section data-state="bg2">
             <titulo><img src="img/udrj-logo.svg" alt=""> </titulo>
             <subheader>Unidade de Desenvolvimento do Rio de Janeiro</subheader>
             </section>
-            <section>
+            <section data-state="bg2">
                 <sub3>Rosane Moreira Soares <subtopico>Gerente da Unidade</subtopico></sub3>
                 <sub3>Norma Suely Neder Stolet <subtopico>Assessoria</subtopico></sub3>
 
@@ -177,65 +221,133 @@
                 <sub3>Paulo Ohno dos Reis Nonaka <subtopico>Gerente DMW4</subtopico></sub3>
 
             </section>
-            <section>
-                <sub1>Equipe e Serviços</sub1>
-                <div class="ct-chart"></div>
-                <script>
-                    var chart = new Chartist.Pie('.ct-chart', {
-                    series: [10, 20, 50, 20, 5, 50, 15],
-                    labels: [1, 2, 3, 4, 5, 6, 7]
-                }, {
-                    donut: true,
-                    showLabel: true
-                });
+            <section data-state="bg2">
+                <sub2>Institucional</sub2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/M9A08Gj3gLs" frameborder="0" allowfullscreen></iframe>
+            </section>
+            <section data-state="bg2" >
+                <sub2>Equipe </sub2>
+                <topico>132 Colaboradores</topico>
 
-                chart.on('draw', function(data) {
-                    if(data.type === 'slice') {
-                        // Get the total path length in order to use for dash array animation
-                        var pathLength = data.element._node.getTotalLength();
-
-                        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-                        data.element.attr({
-                            'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-                        });
-
-                        // Create animation definition while also assigning an ID to the animation for later sync usage
-                        var animationDefinition = {
-                            'stroke-dashoffset': {
-                                id: 'anim' + data.index,
-                                dur: 1000,
-                                from: -pathLength + 'px',
-                                to:  '0px',
-                                easing: Chartist.Svg.Easing.easeOutQuint,
-                                // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-                                fill: 'freeze'
-                            }
-                        };
-
-                        // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-                        if(data.index !== 0) {
-                            animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                    <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie" data-nome="udrj">
+                        <!--
+                        {
+                         "data": {
+                          "labels": ["RJ","MT","MS","MG","ES","BA","RS"],
+                          "datasets": [
+                           {
+                            "data":[110,1,4,5,3,5,5],
+                            "label":"projetos",
+                            "backgroundColor":["#589746","#446ead","#446ead","#446ead","#446ead","#446ead","#446ead"]
+                           }
+                          ]
+                         },
+                         "options": { "responsive": "false" }
                         }
+                        -->
+                    </canvas>
+                <sub3>RJ - 110</sub3>
+                <sub3>Outros - 22</sub3>
+            </section >
+            <section data-state="bg2">
+                <sub2>Serviços</sub2>
+                <sub3>Desenvolvimento e manutenção de Sistemas
+                    <subtopico>Transacionais e Analíticos</subtopico>
+                </sub3>
+                <sub3>Apurações Especiais</sub3>
+                <sub3>Qualificação de Dados</sub3>
 
-                        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-                        data.element.attr({
-                            'stroke-dashoffset': -pathLength + 'px'
-                        });
+            </section>
+            <section data-state="bg2">
+                <sub2>Processo de Trabalho</sub2>
+                <img class="grafico" src="img/dataprev-pd-pn.svg" alt="">
+            </section>
+            <section>
+                <sub2 style="background-color: #9267AC">Projeto / Manutenção</sub2>
+                <img src="img/areas.png" class="grafico" alt="" style="width: 600px!important; background: none!important; box-shadow: none!important;">
+            </section>
+            <section>
+                <sub1>Ferramentas e Tecnologias</sub1>
 
-                        // We can't use guided mode as the animations need to rely on setting begin manually
-                        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-                        data.element.animate(animationDefinition, false);
+                <vitrine style="background-image: url('img/OracleSmall.png') ;"></vitrine>
+                <vitrine style="background-image: url('img/jenkins.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/java.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/jboss_logo.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/selenium.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/Nexus-Logo.jpg') ;">                </vitrine>
+                <vitrine style="background-image: url('img/borland-logo.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/agile-scrum.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/alm.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/angular.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/clarity.jpg') ;">                </vitrine>
+                <vitrine style="background-image: url('img/Data-Flux-Technologies.jpg') ;">                </vitrine>
+                <vitrine style="background-image: url('img/pmi.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/qlik-logo-2x.png') ;">                </vitrine>
+                <vitrine style="background-image: url('img/webfocus.png') ;">                </vitrine>
+            </section>
+            <section>
+                <sub2>Metodologia</sub2>
+                <sub3>Agile</sub3>
+                <sub3>Scrum</sub3>
+                <sub3>DevOps</sub3>
+            </section>
+            <section >
+                <sub1>Clientes</sub1>
+                <botao>
+                    <img src="img/receita-federal-logo-3.png" alt="">
+                </botao>
+                <botao>
+                    <img src="img/pgfn.png" alt="">
+                </botao>
+                <botao>
+                    <img src="img/mte.png" alt="">
+                </botao>
+                <botao>
+                    <img src="img/logo-inss-previdencia-social.png" alt="">
+                </botao>
+                <botao>
+                    <img src="img/inss.png" alt="">
+                </botao>
+            </section>
+            <section data-state="bg2">
+                <div class="grafw"></div>
+                <canvas style="right:-50px; top:100px;" data-chart="polarArea" data-nome="udrj">
+                    <!--
+                    {
+                     "data": {
+                      "labels": ["INSS","RFB","PGFN","MPS"],
+                      "datasets": [
+                       {
+                        "data":[35,16,3,9],
+                        "label":"projetos",
+                        "backgroundColor":["#446ead","#f68e2f","#c62127","#283957"]
+                       }
+                      ]
+                     },
+                     "options": { "responsive": "true" }
                     }
-                });
+                    -->
+                </canvas>
+                <sub2>Produtos por cliente</sub2>
+                <sub3 style="background-color: #446ead">INSS - 35</sub3>
+                <sub3 style="background-color: #f68e2f">RFB - 16</sub3>
+                <sub3 style="background-color: #c62127">MPS - 9</sub3>
+                <sub3 style="background-color: #283957">PGFN - 3</sub3>
 
-                // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-                chart.on('created', function() {
-                    if(window.__anim21278907124) {
-                        clearTimeout(window.__anim21278907124);
-                        window.__anim21278907124 = null;
-                    }
-                    window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
-                });</script>
+
+            </section>
+            <section>
+                <sub3 style="background-color: #446ead">esocial</sub3>
+                <sub3 style="background-color: #446ead">Extrato Cnis</sub3>
+                <sub3 style="background-color: #446ead">Meu INSS</sub3>
+                <sub3 style="background-color: #446ead">SUIBE</sub3>
+                <sub3 style="background-color: #446ead">BG Emprestimo</sub3>
+                <sub3 style="background-color: #446ead">AEPS</sub3>
+            </section>
+
+
+            <section>
+                <sub1>Projetos 2017</sub1>
             </section>
         </section>
         <section>
@@ -249,7 +361,26 @@
             <botao>
                 <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
             </botao>
-
+            <canvas data-chart="line">
+                <!--
+                {
+                 "data": {
+                  "labels": ["January"," February"," March"," April"," May"," June"," July"],
+                  "datasets": [
+                   {
+                    "data":[65,59,80,81,56,55,40],
+                    "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+                   },
+                   {
+                    "data":[28,48,40,19,86,27,90],
+                    "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+                   }
+                  ]
+                 },
+                 "options": { "responsive": "true" }
+                }
+                -->
+            </canvas>
 
         </section>
         <!-- Solução Central de Serviços -->
@@ -304,7 +435,10 @@
                     Segurança e controle de acesso
                 </div>
             </section>
-            <section data-background-video="./img/teste.mp4" data-background-video-loop="loop"> </section>
+            <section data-state="bg2">
+
+                <video id="rene_vidplayer" data-autoplay loop data-src="img/teste.mp4" ></video>
+            </section>
             <section data-state="bg2">
                 <sub2>Motivação</sub2>
                 <topico> Proteger as APIs da Dataprev na internet </topico>
@@ -349,7 +483,8 @@
                 <titulo>API's</titulo>
                 <subheader>Regras de Negócio e Funcionalidades</subheader>
             </section>
-            <section data-background-video="./img/apis2.mp4" data-background-video-loop="loop">
+            <section data-state="bg2">
+                <video id="rene_vidplayer" data-autoplay loop data-src="img/apis2.mp4" ></video>
             </section>
 
             <section data-state="bg2">
@@ -551,6 +686,8 @@
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
             {src: 'plugin/markdown/markdown.js'},
+            { src: 'plugin/chart/Chart.min.js' },
+            { src: 'plugin/chart/csv2chart.js' },
             {src: 'plugin/notes/notes.js', async: true},
             {
                 src: 'plugin/highlight/highlight.js', async: true, callback: function () {
@@ -559,6 +696,32 @@
             }
         ]
     });
+    function update2(cv){
+        var aux = cv.data.datasets[0].data.slice(0);
+        cv.data.datasets[0].data[0] = 0;
+        cv.data.datasets[0].data[1] = 0;
+        cv.data.datasets[0].data[2] = 0;
+        cv.clear();
+        cv.update(0,false);
+
+        cv.data.datasets[0].data= aux;
+        setTimeout(function(){
+            cv.update();
+        },500);
+
+    }
+    Reveal.addEventListener( 'slidechanged', function( event ) {
+
+        var ele = event.currentSlide.getElementsByTagName('canvas')[0];
+        var el = ele.getAttribute("data-nome");
+        if(typeof el != undefined){
+            console.log(event.currentSlide.getAttribute("data-nome"));
+            update2(supaCanvas[el]);
+        }
+
+    } );
+
+
 </script>
 </body>
 </html>
