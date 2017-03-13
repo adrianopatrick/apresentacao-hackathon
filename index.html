@@ -12,6 +12,7 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- Printing and PDF exports -->
@@ -229,6 +230,91 @@
             border:none!important;
             box-shadow: none!important;
         }
+        .detalhe{
+            font-size: 1.1em!important;
+            color: #eed71b;
+        }
+        .image-detalhe{
+            float: right;
+            width: 600px;
+            right: 0px;
+            position: absolute;
+
+            perspective: 750px;
+            -moz-perspective: 750px;
+            -ms-perspective: 750px;
+            -o-perspective: 750px;
+            -webkit-perspective:750px;
+
+            transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+
+        }
+        .image-detalhe img{
+            border:5px #fff solid!important;
+
+            transform: rotate3d(-0.5,1,0,-36deg);
+            -moz-transform: rotate3d(-0.5,1,0,-36deg);
+            -ms-transform: rotate3d(-0.5,1,0,-36deg);
+            -o-transform: rotate3d(-0.5,1,0,-36deg);
+            -webkit-transform: rotate3d(-0.5,1,0,-36deg);
+        }
+        .reveal #framecont iframe, .reveal .frame iframe{
+            max-height: 100%!important;
+            max-width: 100%!important;
+            height: 100%!important;
+            width: 100%!important;
+            ms-zoom: 0.75;
+            -moz-transform: scale(0.75);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.75);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.75);
+            -webkit-transform-origin: 0 0;
+        }
+        .reveal #framecont2 iframe.grande{
+            ms-zoom: 1;
+            -moz-transform: scale(0.7);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.7);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.7);
+            -webkit-transform-origin: 0 0;
+        }
+        .phablet {
+            width: 650px;
+            height: 630px;
+            transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+
+        .celular {
+            width: 320px;
+            height: 480px;
+            transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+        .desktop2 {
+            width: 1100px;
+            height: 630px;
+            transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+        .menu-bt{
+            display: inline-block; 
+            width: 10%; 
+            margin-right: 40px; 
+            vertical-align: top;
+        }
+        .menu-bt i{
+            text-shadow: 1px 1px 2px rgb(87, 87, 87);
+        }
 
 
     </style>
@@ -420,7 +506,6 @@
 
         </section>
 
-
         <!-- Solução Central de Serviços -->
 
         <section data-state = 'bg2'>
@@ -443,8 +528,92 @@
                     <img src="img/celular-inss.png" alt="">
                 </div>
             </section>
-            <sub3>O Meu INSS é uma ferra</sub3>
+            <section>
+                <div>
+                    <topico>Meu INSS</topico>
+                    <sub3> O <span class="detalhe">Meu INSS</span> é uma solução multidispositivos para disponibilizar serviços do INSS para o Cidadão Brasileiro</sub3>
+                    <div class="image-detalhe">
+                        <img src="img/peqINSS.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <topico>Meu INSS</topico>
+                    <sub3 style="width: 90%">Usando tecnologias web e responsividade, podemos entregar uma unica aplicação em diversos dispositivos - Veja nos botões abaixo  </sub3>
+                </div>
+                <div>
+                    <div class="menu-bt">
+                        <i id="cel" style="color:#17a423" class="fa fa-mobile"></i><br>
+                        <i id="tablet" style="color:#e1c122" class="fa fa-tablet"></i><br>
+                        <i id="desktop" style="color:#416ed2" class="fa fa-desktop"></i><br>
+                    </div>
+                    <div style="display: inline-block; width: 70%;  vertical-align: top; font-size: 0.9em ">
 
+                        <div id="framecont" class="celular">
+                            <iframe id="frame" src="https://servicos.inss.gov.br/"  >
+
+
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section>
+                <sub2>Uso de Navegadores</sub2>
+                <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie" data-nome="navegadores">
+                    <!--
+                    {
+                     "data": {
+                      "labels": ["Chrome","Firefox","Internet Explorer","Chrome Mobile","Edge","outros"],
+                      "datasets": [
+                       {
+                        "data":[300,46,40,25,8,11],
+                        "label":"projetos",
+                        "backgroundColor":["#f4b942","#ed3f28","#7c3906","#287ded","#446ead","#02e7fc","#7c3906"]
+                       }
+                      ]
+                     },
+                     "options": { "responsive": "false" }
+                    }
+                    -->
+                </canvas>
+            </section>
+            <section>
+                <topico>Meu INSS</topico>
+                <sub2>Serviços Oferecidos</sub2>
+                <sub3>Extrato CNIS</sub3>
+                <sub3>Historico de Créditos</sub3>
+                <sub3>Carta de Concessão</sub3>
+                <sub3>Declaração de Regularidade do Contribuinte Individual</sub3>
+                <sub3>Consulta Rev Art 29</sub3>
+                <sub3>Encontre uma Agência</sub3>
+                 <div class="frame phablet" style=" position: absolute; right: -190px; top:150px">
+                    <iframe  src="https://servicos.inss.gov.br/" class="grande" >
+
+
+                    </iframe>
+                </div>
+            </section>
+            <section>
+                <topico>Meu INSS</topico>
+                <sub2>Futuros Serviços</sub2>
+                <sub3>Empréstimos Consignados</sub3>
+                <sub3>Consulta Declaração de Benefício - Consta/Nada Consta</sub3>
+                <sub3>Comunicação de Resultado de Requerimento - CRER</sub3>
+                <sub3>Simulador de Aposentadoria</sub3>
+                <sub3>Laudo Médico</sub3>
+
+            </section>
+            <section>
+                <topico>Meu INSS</topico>
+                <sub2>Futuras funcionalidades</sub2>
+                <sub3>Notificações</sub3>
+                <sub3>Resumo de Serviços</sub3>
+                <sub2 style="font-size: 0.5em">Futuras Futuras Funcionalidades</sub2>
+                <sub3 style="background-color: #9ee54e">Perícia Médica</sub3>
+            </section>
         </section>
         <section>
             <section data-state = "bg2">
@@ -758,6 +927,32 @@
             }
         ]
     });
+    var frame = document.getElementById('framecont');
+    var cel = document.getElementById('cel');
+    var tablet = document.getElementById('tablet');
+    var desktop = document.getElementById('desktop');
+
+    cel.addEventListener('click',function(){
+        remove();
+        frame.classList.add('celular');
+
+    })
+    tablet.addEventListener('click',function(){
+        remove();
+        frame.classList.add('phablet');
+
+    })
+    desktop.addEventListener('click',function(){
+        remove();
+        frame.classList.add('desktop2');
+
+    })
+
+    function remove(){
+        frame.classList.remove('celular');
+        frame.classList.remove('tablet');
+        frame.classList.remove('desktop2');
+    }
     function update2(cv){
         var aux = cv.data.datasets[0].data.slice(0);
         cv.data.datasets[0].data[0] = 0;
@@ -774,12 +969,16 @@
     }
     Reveal.addEventListener( 'slidechanged', function( event ) {
 
-        var ele = event.currentSlide.getElementsByTagName('canvas')[0];
-        var el = ele.getAttribute("data-nome");
-        if(typeof el != undefined){
-            console.log(event.currentSlide.getAttribute("data-nome"));
-            update2(supaCanvas[el]);
+        if(event.currentSlide.getElementsByTagName('canvas')[0] !== undefined){
+            var ele = event.currentSlide.getElementsByTagName('canvas')[0];
+            var el = ele.getAttribute("data-nome");
+            if(typeof el != undefined){
+                console.log(event.currentSlide.getAttribute("data-nome"));
+                update2(supaCanvas[el]);
+            }
         }
+
+
 
     } );
 
