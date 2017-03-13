@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>UDRJ</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -50,7 +50,35 @@
             display: block;
             font-size: 1.5em;
             text-transform: uppercase;
+            height: 40px;
+            padding: 10px;
+
         }
+        .bgazul{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4188bf+0,356aa0+100 */
+            background: #4188bf; /* Old browsers */
+            background: -moz-linear-gradient(top, #4188bf 0%, #356aa0 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #4188bf 0%,#356aa0 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #4188bf 0%,#356aa0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4188bf', endColorstr='#356aa0',GradientType=0 ); /* IE6-9 */
+        }
+        .bgamarelo{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffee56+0,efbd1a+98 */
+            background: #ffee56; /* Old browsers */
+            background: -moz-linear-gradient(top, #ffee56 0%, #efbd1a 98%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ffee56 0%,#efbd1a 98%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ffee56 0%,#efbd1a 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffee56', endColorstr='#efbd1a',GradientType=0 ); /* IE6-9 */
+        }
+        .bgverde{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9ee54e+0,3fbf15+98 */
+            background: #9ee54e; /* Old browsers */
+            background: -moz-linear-gradient(top, #9ee54e 0%, #3fbf15 98%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #9ee54e 0%,#3fbf15 98%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #9ee54e 0%,#3fbf15 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ee54e', endColorstr='#3fbf15',GradientType=0 ); /* IE6-9 */
+        }
+
         sub2{
             color: white;
             text-shadow: 1px 1px 2px rgb(53, 61, 87);
@@ -195,6 +223,11 @@
             position: absolute!important;
             right: 113px!important;
             top: 103px!important;
+        }
+        .reveal img{
+            background-color: transparent!important;
+            border:none!important;
+            box-shadow: none!important;
         }
 
 
@@ -386,27 +419,15 @@
             </section>
 
         </section>
-        <section>
-            <sub1>Produtos</sub1>
-            <botao>
-                <a href="#/2"><img src="img/esocial2.png" alt=""></a>
-            </botao>
-            <botao>
-                <a href="#/2"><img src="img/logo-extrato.svg" alt=""></a>
-            </botao>
-            <botao>
-                <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
-            </botao>
 
-
-        </section>
 
         <!-- Solução Central de Serviços -->
-        <section data-state = 'bg'>
-            <div>
-                <titulo style="font-size: 3.5em">Solução da</titulo>
-                <titulo>Central de Serviços</titulo>
+        <section data-state = 'bg2'>
+            <sub1 style="font-size: 2.5em">Meu INSS</sub1>
+            <div style="position: absolute; top:-30px; z-index: -1">
+                <img src="img/celular-inss.png" alt="">
             </div>
+
         </section>
         <section data-state = 'bg'>
             <sub1 >Apresentação</sub1>
@@ -418,15 +439,10 @@
             </section>
         </section>
         <section>
-            <section>
-                <sub1>Visão Geral</sub1>
+            <section data-state="bg">
+                <sub1 class="bgazul">Visão Geral</sub1>
             </section>
-            <section>
-                Plataforma de autenticação
-            </section>
-            <section>
-                Meu INSS
-            </section>
+
         </section>
         <section>
             <section data-state = 'bg'>
@@ -701,7 +717,22 @@
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <source src="./img/2048-4.mp4" type="video/mp4">
 </video>
+<div style="display: none">
+    <section>
+        <sub1>Produtos</sub1>
+        <botao>
+            <a href="#/2"><img src="img/esocial2.png" alt=""></a>
+        </botao>
+        <botao>
+            <a href="#/2"><img src="img/logo-extrato.svg" alt=""></a>
+        </botao>
+        <botao>
+            <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
+        </botao>
 
+
+    </section>
+</div>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 
