@@ -348,7 +348,7 @@
                 <sub2>Equipe </sub2>
                 <topico>132 Colaboradores</topico>
 
-                    <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie" data-nome="udrj">
+                    <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie" data-nome="equipe">
                         <!--
                         {
                          "data": {
@@ -509,7 +509,7 @@
         <!-- Solução Central de Serviços -->
 
         <section data-state = 'bg2'>
-            <sub1 >Apresentação</sub1>
+            <sub1 class="bgazul">Apresentação</sub1>
             <br/>
             <sub3 class="fragment fade-left">Visão Geral</sub3>
             <sub3 class="fragment fade-left">Visão Estratégica</sub3>
@@ -520,7 +520,7 @@
         </section>
         <section>
             <section data-state="bg2">
-                <sub1 class="bgazul">Visão Geral</sub1>
+                <titulo>Visão Geral</titulo>
             </section>
             <section data-state = 'bg2'>
                 <sub1 style="font-size: 2.5em">Meu INSS</sub1>
@@ -531,7 +531,8 @@
             <section>
                 <div>
                     <topico>Meu INSS</topico>
-                    <sub3> O <span class="detalhe">Meu INSS</span> é uma solução multidispositivos para disponibilizar serviços do INSS para o Cidadão Brasileiro</sub3>
+                    <sub3 > O <span class="detalhe">Meu INSS</span> é uma solução multidispositivos para disponibilizar serviços do INSS para o Cidadão Brasileiro</sub3>
+                    <sub3 class="fragment fade-up"> Assim, podemos <span class="detalhe">resolver a necessidade</span> do usuário onde ele estiver </sub3>
                     <div class="image-detalhe">
                         <img src="img/peqINSS.png" alt="">
                     </div>
@@ -540,7 +541,7 @@
             <section>
                 <div>
                     <topico>Meu INSS</topico>
-                    <sub3 style="width: 90%">Usando tecnologias web e responsividade, podemos entregar uma unica aplicação em diversos dispositivos - Veja nos botões abaixo  </sub3>
+                    <sub3 style="width: 90%">Usando tecnologias web e responsividade, podemos entregar uma <span class="detalhe">unica aplicação</span> em diversos dispositivos - Veja nos botões abaixo  </sub3>
                 </div>
                 <div>
                     <div class="menu-bt">
@@ -557,21 +558,27 @@
                             </iframe>
                         </div>
                     </div>
+
                 </div>
 
             </section>
             <section>
-                <sub2>Uso de Navegadores</sub2>
-                <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie" data-nome="navegadores">
+                <topico>Meu INSS</topico>
+                <sub2>Uso de Navegadores no Brasil</sub2>
+                <sub3>Chrome - 77.75%</sub3>
+                <sub3>Firefox - 6.16%</sub3>
+                <sub3>Outros - 16,09%</sub3>
+
+                <canvas style="right:-50px; width: 60%!important;position: absolute;top: 150px;" data-chart="pie" data-nome="navegadores">
                     <!--
                     {
                      "data": {
-                      "labels": ["Chrome","Firefox","Internet Explorer","Chrome Mobile","Edge","outros"],
+                      "labels": ["Chrome","Firefox","Internet Explorer","Edge","outros"],
                       "datasets": [
                        {
-                        "data":[300,46,40,25,8,11],
+                        "data":[325,46,40,8,11],
                         "label":"projetos",
-                        "backgroundColor":["#f4b942","#ed3f28","#7c3906","#287ded","#446ead","#02e7fc","#7c3906"]
+                        "backgroundColor":["#f4b942","#ed3f28","#02e7fc","#446ead","#7c3906"]
                        }
                       ]
                      },
@@ -579,7 +586,15 @@
                     }
                     -->
                 </canvas>
+
             </section>
+            
+            <section>
+                <topico>Meu INSS</topico>
+                <sub3 style="width: 90%">Não é só uma questão de Mobile vs Web - Uso de diversos dispositivos é mais comum na maioria dos países</sub3>
+                <img src="img/multiplataformas.png" alt="">
+            </section>
+            
             <section>
                 <topico>Meu INSS</topico>
                 <sub2>Serviços Oferecidos</sub2>
@@ -610,7 +625,8 @@
                 <topico>Meu INSS</topico>
                 <sub2>Futuras funcionalidades</sub2>
                 <sub3>Notificações</sub3>
-                <sub3>Resumo de Serviços</sub3>
+                <sub3>Serviços Unificados ou Resumo de Cliente</sub3>
+                <sub3>Interface para Idoso</sub3>
                 <sub2 style="font-size: 0.5em">Futuras Futuras Funcionalidades</sub2>
                 <sub3 style="background-color: #9ee54e">Perícia Médica</sub3>
             </section>
@@ -901,7 +917,30 @@
             <a href="#/2"><img src="img/meu-inss2.png" alt=""></a>
         </botao>
 
-
+        <canvas data-chart="bar" data-nome="multi">
+            <!--
+            {
+             "data": {
+              "labels": ["DEZ-2013"," DEZ-2014","DEZ-2015","DEZ-2016"],
+              "datasets": [
+               {
+                "data":[505.591 , 551.184 , 500.173 , 463.814],
+                "label":"Desktop","backgroundColor":"rgba(20,220,220,1)"
+               },
+               {
+                "data":[441.693 , 646.324 , 787.541 , 878.654],
+                "label":"Smartphone","backgroundColor":"rgba(0,120,120,1)"
+               },
+               {
+                "data":[123.661 , 197.446 , 160.767 , 156.199 ],
+                "label":"Tablet","backgroundColor":"rgba(220,120,120,1)"
+               }
+              ]
+             },
+             "options": { "responsive": "true" }
+            }
+            -->
+        </canvas>
     </section>
 </div>
 <script src="lib/js/head.min.js"></script>
@@ -954,14 +993,20 @@
         frame.classList.remove('desktop2');
     }
     function update2(cv){
-        var aux = cv.data.datasets[0].data.slice(0);
-        cv.data.datasets[0].data[0] = 0;
-        cv.data.datasets[0].data[1] = 0;
-        cv.data.datasets[0].data[2] = 0;
+        var aux = [];
+        for (var j = 0; j<cv.data.datasets.length;j++) {
+                aux[j]=cv.data.datasets[j].data.slice(0);
+            for (var i = 0; i < cv.data.datasets[0].data.length; i++) {
+                cv.data.datasets[j].data[i] = 0;
+            }
+        }
+
+
         cv.clear();
         cv.update(0,false);
-
-        cv.data.datasets[0].data= aux;
+        for (var x = 0; x<cv.data.datasets.length;x++) {
+            cv.data.datasets[x].data = aux[x];
+        }
         setTimeout(function(){
             cv.update();
         },500);
