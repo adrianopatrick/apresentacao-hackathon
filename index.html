@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>UDRJ</title>
+    <title>UDCE</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -25,6 +25,7 @@
     </script>
     <style>
         video#bgvid {
+            background-image: url("img/fortaleza.jpg");
             position: fixed;
             top: 50%;
             left: 50%;
@@ -34,7 +35,8 @@
             height: auto;
             z-index: -100;
             transform: translateX(-50%) translateY(-50%);
-            background-size: contain;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
             transition: 1s opacity;
         }
 
@@ -61,6 +63,7 @@
         .bgazul {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4188bf+0,356aa0+100 */
             background: #4188bf; /* Old browsers */
+            height: 60px;
             background: -moz-linear-gradient(top, #4188bf 0%, #356aa0 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(top, #4188bf 0%, #356aa0 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom, #4188bf 0%, #356aa0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -354,195 +357,9 @@
         <!-- CAPA -->
         <section>
             <section data-state="bg2">
-                <titulo><img src="img/udrj-logo.svg" alt=""></titulo>
-                <subheader>Unidade de Desenvolvimento do Rio de Janeiro</subheader>
-            </section>
-            <section data-state="bg2">
-                <sub3>Rosane Moreira Soares
-                    <subtopico>Gerente da Unidade</subtopico>
-                </sub3>
-                <sub3>Norma Suely Neder Stolet
-                    <subtopico>Assessoria</subtopico>
-                </sub3>
-
-                <sub3>Leonardo Simões
-                    <subtopico>Assessoria Técnica</subtopico>
-                </sub3>
-
-                <sub3>Andre Luiz dos Santos
-                    <subtopico>Gerente DMP4</subtopico>
-                </sub3>
-
-                <sub3>Paulo Ohno dos Reis Nonaka
-                    <subtopico>Gerente DMW4</subtopico>
-                </sub3>
-
-            </section>
-            <section data-state="bg2">
-                <sub2>Institucional</sub2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/M9A08Gj3gLs" frameborder="0"
-                        allowfullscreen></iframe>
-            </section>
-            <section data-state="bg2">
-                <sub2>Equipe</sub2>
-                <topico>132 Colaboradores</topico>
-
-                <canvas style="right:-50px; width: 60%!important;position: absolute;top: 110px;" data-chart="pie"
-                        data-nome="equipe">
-                    <!--
-                    {
-                     "data": {
-                      "labels": ["RJ","MT","MS","MG","ES","BA","RS"],
-                      "datasets": [
-                       {
-                        "data":[110,1,4,5,3,5,5],
-                        "label":"projetos",
-                        "backgroundColor":["#589746","#446ead","#446ead","#446ead","#446ead","#446ead","#446ead"]
-                       }
-                      ]
-                     },
-                     "options": { "responsive": "false" }
-                    }
-                    -->
-                </canvas>
-                <sub3>RJ - 110</sub3>
-                <sub3 style="background-color:#446ead ">Outros - 22</sub3>
-            </section>
-            <section data-state="bg2">
-                <sub2>Serviços</sub2>
-                <sub3>Desenvolvimento e manutenção de Sistemas
-                    <subtopico>Transacionais e Analíticos</subtopico>
-                </sub3>
-                <sub3>Apurações Especiais</sub3>
-                <sub3>Qualificação de Dados</sub3>
-
-            </section>
-            <section data-state="bg2">
-                <sub2>Processo de Trabalho</sub2>
-                <img class="grafico" src="img/dataprev-pd-pn.svg" alt="">
-            </section>
-            <section>
-                <sub2 style="background-color: #9267AC">Projeto / Manutenção</sub2>
-                <img src="img/areas.png" class="grafico" alt=""
-                     style="width: 600px!important; background: none!important; box-shadow: none!important;">
-            </section>
-            <section>
-                <sub1>Ferramentas e Tecnologias</sub1>
-
-                <vitrine style="background-image: url('img/OracleSmall.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/jenkins.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/java.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/jboss_logo.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/selenium.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/Nexus-Logo.jpg') ;"></vitrine>
-                <vitrine style="background-image: url('img/borland-logo.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/agile-scrum.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/alm.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/angular.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/clarity.jpg') ;"></vitrine>
-                <vitrine style="background-image: url('img/Data-Flux-Technologies.jpg') ;"></vitrine>
-                <vitrine style="background-image: url('img/pmi.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/qlik-logo-2x.png') ;"></vitrine>
-                <vitrine style="background-image: url('img/webfocus.png') ;"></vitrine>
-            </section>
-            <section>
-                <sub2>Metodologia</sub2>
-                <sub3>Agile</sub3>
-                <sub3>Scrum</sub3>
-                <sub3>DevOps</sub3>
-            </section>
-            <section>
-                <sub1>Clientes</sub1>
-                <botao>
-                    <img src="img/receita-federal-logo-3.png" alt="">
-                </botao>
-                <botao>
-                    <img src="img/pgfn.png" alt="">
-                </botao>
-                <botao>
-                    <img src="img/mte.png" alt="">
-                </botao>
-                <botao>
-                    <img src="img/logo-inss-previdencia-social.png" alt="">
-                </botao>
-                <botao>
-                    <img src="img/inss.png" alt="">
-                </botao>
-            </section>
-            <section data-state="bg2">
-                <div class="grafw"></div>
-                <canvas style="right:-50px; top:100px;" data-chart="polarArea" data-nome="udrj">
-                    <!--
-                    {
-                     "data": {
-                      "labels": ["INSS","RFB","PGFN","MPS"],
-                      "datasets": [
-                       {
-                        "data":[35,16,3,9],
-                        "label":"projetos",
-                        "backgroundColor":["#446ead","#f68e2f","#c62127","#283957"]
-                       }
-                      ]
-                     },
-                     "options": { "responsive": "true" }
-                    }
-                    -->
-                </canvas>
-                <sub2>Produtos por cliente</sub2>
-                <sub3 style="background-color: #446ead">INSS - 35</sub3>
-                <sub3 style="background-color: #f68e2f">RFB - 16</sub3>
-                <sub3 style="background-color: #c62127">MPS - 9</sub3>
-                <sub3 style="background-color: #283957">PGFN - 3</sub3>
-
-
-            </section>
-            <section data-state="bg2">
-                <h1></h1>
-                <div data-timeline="welcome.json"></div>
-            </section>
-            <section data-state="bg2">
-                <sub2>Produtos INSS</sub2>
-                <sub3 style="background-color: #446ead">esocial</sub3>
-                <sub3 style="background-color: #446ead">Extrato Cnis</sub3>
-                <sub3 style="background-color: #446ead">Meu INSS</sub3>
-                <sub3 style="background-color: #c467c5">SUIBE</sub3>
-                <sub3 style="background-color: #c467c5">BG Emprestimo</sub3>
-                <sub3 style="background-color: #c467c5">AEPS</sub3>
-                <div>
-                    <sub3>Outros
-                        <subtopico>CI, GPS, PJ, CAT</subtopico>
-
-                        <subtopico>COMPREV, TCE II</subtopico>
-
-                        <subtopico>SIGMA, Sala de Monitoramento</subtopico>
-                        <subtopico> GET Serviço Social, DEBCON</subtopico>
-                        <subtopico> DRSCI, Super Triagem
-                            <subtopico>
-
-
-                    </sub3>
-                </div>
-
-            </section>
-            <section>
-                <sub2>Projetos do INSS em Andamento</sub2>
-                <sub3>Esocial</sub3>
-                <sub3>Extrato</sub3>
-                <sub3>PJ e Baixa Renda</sub3>
-                <sub3>Central de Serviços</sub3>
-                <sub3>TCE II</sub3>
-                <sub3>BG SUIBE</sub3>
-                <sub3>AEPS</sub3>
-                <sub3>Qualificação de Dados CV3</sub3>
-            </section>
-
-            <section>
-                <sub2>Projetos Outros Clientes 2017</sub2>
-                <sub3>Plataforma de Autenticação</sub3>
-                <sub3>Painel de Relacionamento com Cliente</sub3>
-                <sub3>GESCON - Gestão de Consultas RPPS</sub3>
-                <sub3>SDC CV3</sub3>
-                <sub3>Projeto RFB 2017</sub3>
+                <titulo>Unidade de Desenvolvimento do Ceará</titulo>
+                <br/>
+                <subheader>Adriano Patrick Cunha</subheader>
             </section>
 
         </section>
@@ -552,23 +369,25 @@
         <section data-state='bg2'>
             <sub1 class="bgazul">Apresentação</sub1>
             <br/>
-            <sub3 class="fragment fade-left">Visão Geral</sub3>
-            <sub3 class="fragment fade-left">Visão Estratégica</sub3>
-            <sub3 class="fragment fade-left">Visão de Negócio</sub3>
-            <sub3 class="fragment fade-left">Visão de Produto</sub3>
-            <sub3 class="fragment fade-left">Próximos passos</sub3>
+            <sub3 class="fragment fade-left">Plataforma de Autenticação - Cidadão BR</sub3>
+            <sub3 class="fragment fade-left">Meu INSS</sub3>
+            <sub3 class="fragment fade-left">SINE Fácil</sub3>
         </section>
         </section>
         <section>
-            <section data-state="bg2">
-                <titulo>Visão Geral</titulo>
-            </section>
+
             <Section>
                 <titulo> Plataforma de Autenticação</titulo>
 
                 <img src="img/id-card.svg" style="width: 400px; border: none!important;" talt="">
 
             </Section>
+            <section>
+                <img src="img/cidadaoBr.png" width="350px" alt="">
+            </section>
+            <section>
+                <img src="coisograma.png" width="800px" alt="">
+            </section>
             <section data-state='bg2'>
                 <topico>Plataforma de Autenticação</topico>
                 <sub3>A plataforma de autenticação é uma solução de identificação e cadastro de senha de Cidadão</sub3>
@@ -613,12 +432,7 @@
             <section data-state='bg2'>
                 <img src="img/patimg8.png" width="600px" alt="">
             </section>
-            <section data-state='bg2'>
-                <topico>Plataforma de Autenticação</topico>
-                <sub3>No futuro, a aplicação será totalmente pela internet, assim não sendo dependente da CENTRAL 135
-                </sub3>
 
-            </section>
             <section data-state='bg2'>
                 <topico>Plataforma de Autenticação</topico>
                 <sub2>Níveis de Acesso</sub2>
@@ -627,30 +441,10 @@
             </section>
             <section data-state='bg2'>
                 <topico>Plataforma de Autenticação</topico>
-                <sub2>Plataforma Hoje</sub2>
-                <img src="img/patimg1.png" alt="">
-            </section>
-            <section data-state='bg2'>
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Plataforma Hoje</sub2>
-                <img src="img/patimg2.jpg" alt="">
-            </section>
-            <section data-state='bg2'>
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Plataforma Hoje</sub2>
-                <img src="img/patimg3.jpg" style="width: 700px" alt="">
-            </section>
-            <section data-state='bg2'>
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Plataforma Hoje</sub2>
-                <img src="img/patimg7.png" style="width: 700px" alt="">
-            </section>
-
-            <section data-state='bg2'>
-                <topico>Plataforma de Autenticação</topico>
                 <sub2>Aplicaçoes</sub2>
                 <sub3>SAT</sub3>
                 <sub3>Meu INSS</sub3>
+                <sub3>SINE Fácil</sub3>
                 <sub3 style="background-color: #0d99a5">Portal Mais Emprego</sub3>
                 <sub3 style="background-color: #0d99a5">Emprega Brasil</sub3>
             </section>
@@ -669,9 +463,29 @@
                 </sub3>
                 <sub3>Módulos: Internet, intranet, negócio, service</sub3>
             </section>
+            <section data-state="bg2">
+                <topico>Gateway</topico>
+                <sub2>Desafios</sub2>
 
+                <topico>Tecnologia</topico>
+                <topico>Proficiência</topico>
+                <topico>Governança</topico>
 
-            <section data-state='bg2'>
+                <sub2>Desenvolvimento</sub2>
+
+                <topico>Tomcat</topico>
+                <topico>Spring Security</topico>
+                <topico>Jdk 1.7</topico>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+            </section>
+        </section>
+        <section>
+            <section>
                 <sub1 style="font-size: 2.5em">Meu INSS</sub1>
                 <div style="position: absolute; top:-30px; z-index: -1">
                     <img src="img/celular-inss.png" alt="">
@@ -707,7 +521,7 @@
                     <div style="display: inline-block; width: 70%;  vertical-align: top; font-size: 0.9em ">
 
                         <div id="framecont" class="celular">
-                            <iframe id="frame" src="https://servicos.inss.gov.br/">
+                            <iframe id="frame" src="http://10.65.10.98:8080/">
 
                             </iframe>
                         </div>
@@ -752,6 +566,47 @@
                 <img src="img/multiplataformas.png" alt="">
             </section>
 
+            <section data-state='bg2'>
+                <topico>Meu INSS</topico>
+                <sub2>Desenvolvimento</sub2>
+                <sub3>Vanilha</sub3>
+                <sub3>ReactJS</sub3>
+                <sub3>Axios</sub3>
+                <sub3>WebPack</sub3>
+                <sub3>Babel</sub3>
+                <sub3>Ambientes:
+                    <topico>Desenvolvimento (Nuvem)</topico>
+                    <topico>Homologação</topico>
+                    <topico>Produção</topico>
+                </sub3>
+            </section>
+
+            <section data-state="bg2">
+                <topico>Meu INSS</topico>
+                <sub2>Desafios</sub2>
+
+                <topico>Lidar com tecnologia nova
+
+                    <topico>Single Page Applications</topico>
+
+                </topico>
+                <topico>Lidar com técnicas novas
+
+                    <topico>UX</topico>
+                    <topico>Usabilidade</topico>
+                    <topico>Design</topico>
+
+                </topico>
+                <sub2>Tecnologia</sub2>
+                <topico>Javascript</topico>
+                <topico>ReactJS</topico>
+                <topico>CSS</topico>
+                <topico>HTML5</topico>
+
+                <br>
+                <br>
+            </section>
+
             <section>
                 <topico>Meu INSS</topico>
                 <sub2>Serviços Oferecidos</sub2>
@@ -771,11 +626,20 @@
             <section>
                 <topico>Meu INSS</topico>
                 <sub2>Futuros Serviços</sub2>
+                <sub3>Aposentadoria por Idade Automática</sub3>
+                <sub3>Licença Maternidade Automática</sub3>
+                <sub3>Agendamento de Atendimento Presencial e a Distância</sub3>
                 <sub3>Empréstimos Consignados</sub3>
                 <sub3>Consulta Declaração de Benefício - Consta/Nada Consta</sub3>
                 <sub3>Comunicação de Resultado de Requerimento - CRER</sub3>
                 <sub3>Simulador de Aposentadoria</sub3>
                 <sub3>Laudo Médico</sub3>
+                <div class="frame phablet" style=" position: absolute; right: -190px; top:150px">
+                    <iframe src="http://10.65.10.98:8080/" class="grande">
+
+
+                    </iframe>
+                </div>
 
             </section>
             <section>
@@ -791,344 +655,43 @@
         </section>
         <section>
             <section data-state="bg2">
-                <titulo>Visão Estratégica</titulo>
-                <subheader>Visão da Dataprev sobre a solução: Necessidades e Opotunidades</subheader>
-            </section>
-            <!-- plataforma -->
-            <section data-state="bg2">
-                <titulo>Plataforma de autenticação</titulo>
-                <div class="vidro fragment fade-left">
-                    Solução de autenticação e identificação de Cidadão.
-                </div>
-
-            </section>
-            <section data-state="bg2">
-                <sub2>Motivação</sub2>
-
-                <topico>Problema de autenticação do INSS</topico>
-                <topico>Redução de filas do INSS</topico>
-
-                <sub2>Desafios</sub2>
-                <topico>Perguntas (KBA)</topico>
-                <topico>Presencial</topico>
-
-                <topico>Níveis de concessão de senhas</topico>
-                <topico>Atendimento ao usuário</topico>
-                <sub2>Oportunidade</sub2>
-                <topico>Autenticação Governamental</topico>
-            </section>
-
-
-            <!--Gateway -->
-            <section data-state="bg2">
-                <titulo>Gateway de API</titulo>
-                <div class="vidro fragment fade-left">
-                    Segurança e controle de acesso
+                <titulo>Sine fácil</titulo>
+                <subheader style="position: absolute; margin-top: 50px;">Ficou mais fácil e simples acessar os serviços
+                    da rede SINE
+                </subheader>
+                <div style="position: absolute; top:100px; z-index: -1;left:-50px;height: 620px;">
+                    <img src="img/sinefacil1.jpg" alt="">
                 </div>
             </section>
             <section data-state="bg2">
-
-                <video id="ren2" data-autoplay loop data-src="img/teste.mp4"></video>
+                <titulo>Sine fácil</titulo>
+                <div style="position: absolute; top:100px; z-index: -1;left:-50px;height: 620px;">
+                    <img src="img/sinefacil2.jpg" alt="">
+                </div>
             </section>
             <section data-state="bg2">
-                <sub2>Motivação</sub2>
-                <topico> Proteger as APIs da Dataprev na internet</topico>
-
-                <sub2>Desafios</sub2>
-
-                <topico>Inexistência de solução similar na empresa</topico>
-                <topico>Falta de expertise:
-                    <topico>Gateway de APIs</topico>
-                    <topico>Segurança de APIs</topico>
-                    <topico>Integração com solução de mercado (abandonado)</topico>
-                </topico>
-
-                <sub2>Oportunidade</sub2>
-                <topico>Solução de bilhetagem corporativa centralizada</topico>
-                <topico>Uniformizar os acessos as APIs</topico>
-
-
-            </section>
-            <!-- Meu INSS -->
-            <section data-state='bg2'>
-                <titulo>Meu INSS</titulo>
-                <subheader>Interface Responsiva: Melhoria no acesso e aproximação com o Cliente</subheader>
-
-            </section>
-
-            <section data-state='bg2'>
-                <sub2>Motivação</sub2>
-                <topico>Melhorar a apresentação dos serviços entregues ao cidadão</topico>
-                <sub2>Desafios</sub2>
-                <topico>Tecnologia nova sem padrão definido</topico>
-                <sub2>Oportunidade</sub2>
-                <topico>Aumentar a agilidade no deploy de alterações de layout</topico>
-                <topico>Entregar aplicações voltadas para o cidadão</topico>
-                <topico>Mobilidade</topico>
-            </section>
-
-
-            <!-- APIs -->
-            <section data-state="bg2">
-                <titulo>API's</titulo>
-                <subheader>Regras de Negócio e Funcionalidades</subheader>
+                <titulo>Sine fácil</titulo>
+                <div style="position: absolute; top:100px; z-index: -1;left:-50px;height: 620px;">
+                    <img src="img/sinefacil3.jpg" alt="">
+                </div>
             </section>
             <section data-state="bg2">
-                <video id="rene_vidplayer" data-autoplay loop data-src="img/apis2.mp4"></video>
-            </section>
-
-            <section data-state="bg2">
-                <sub2>Motivação</sub2>
-                <topico>Novo modelo de cobrança baseado em uso das API's</topico>
-                <topico>Padronizar o acesso as APIs (contrato)</topico>
-                <topico>Fomentar o uso de serviços na casa</topico>
-                <sub2>Desafios</sub2>
-                <topico>Barramento</topico>
-                <topico>Governança</topico>
-                <topico>Infra (legado)</topico>
-                <sub2>Oportunidades</sub2>
-                <topico>Implantar uma cultura de SOA na casa</topico>
+                <titulo>Sine fácil</titulo>
+                <div style="position: absolute; top:100px; z-index: -1;left:-50px;height: 620px;">
+                    <img src="img/sinefacil4.png" alt="">
+                </div>
             </section>
 
         </section>
         <section>
             <section data-state="bg2">
-                <titulo>Visão de Negócio</titulo>
-                <subheader>Posição de Negócio sobre a solução: Pedidos e Demandas</subheader>
-            </section>
-
-            <section data-state="bg2">
-                <sub1>Plataforma</sub1>
-                <sub2>Motivação</sub2>
-                <topico>Melhorar relacionamento com o cliente</topico>
-                <sub2>Desafios</sub2>
-                <topico>Cidadão como cliente do produto</topico>
-                <sub2>Oportunidade</sub2>
-                <topico>Desenvolver aplicações governamentais para o cidadão</topico>
-            </section>
-            <section data-state='bg2'>
-                <sub2>Contatos</sub2>
-                <topico>Thiago Mendanha</topico>
-                <topico>William Veronesi Rocha (DESC)</topico>
-                <topico>Marina Veloso</topico>
-                <topico>Márcia Bezerra</topico>
-                <topico>Ridai Govinda Pombo (DICA)</topico>
-                <topico>Thiago Almeida</topico>
-                <topico>Fernando Magalhães</topico>
-            </section>
-            <!-- GAteway -->
-            <section data-state="bg2">
-                <sub1>Gateway</sub1>
-                <sub2>Desafios</sub2>
-                <topico>Visão de software como serviço</topico>
-                <sub2>Oportunidade</sub2>
-                <topico>Gerar negócios e vender serviços aos clientes</topico>
-                <br/>
-            </section>
-            <section data-state='bg2'>
-                <sub2>Contatos</sub2>
-                <topico>Wallace Roque de Figueiredo</topico>
-            </section>
-            <!-- Meu INSS -->
-            <section data-state="bg2">
-                <sub1>Meu INSS</sub1>
-                <sub2>Motivação</sub2>
-                <topico>Melhorar a apresentação dos serviços entregues ao cidadão</topico>
-                <topico>Dar agilidade as demandas de front-end</topico>
-                <topico>Aumentar o numero de serviço oferecidos a DIRAT</topico>
-                <sub2>Desafios</sub2>
-                <topico>Clientes (pessoas) diferentes com demandas diferentes</topico>
-                <topico>Agilidade</topico>
-                <sub2>Oportunidade</sub2>
-                <topico>Provar capacidade</topico>
-
-            </section>
-            <section data-state='bg2'>
-                <sub2>Contatos</sub2>
-                <topico>Rafael Rubem</topico>
-                <topico>Márcia Bezerra</topico>
-                <topico>Pedro Neto</topico>
-                <topico>Jorge Lage</topico>
-                <topico>Márcia Migues</topico>
-                <topico>Alexandre Oliveira</topico>
-                <topico>Marina Veloso</topico>
-            </section>
-
-
-        </section>
-        <section>
-            <section data-state="bg2">
-                <titulo>Visão de Produto</titulo>
-                <subheader>Sobre o Produto: Tecnologia e Desenvolvimento</subheader>
-            </section>
-
-            <section data-state="bg2">
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Desafios</sub2>
-                <topico>Extrair dados das bases para responder as perguntas (KBA)</topico>
-                <topico>Batimento inicial da pessoa com a base do CNIS</topico>
-                <topico>Certificado Digital (HTTPS)</topico>
-                <topico>Captcha</topico>
-                <br/>
-            </section>
-            <section data-state="bg2">
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Desenvolvimento</sub2>
-
-                <topico>Framework DTP 4.0.5</topico>
-                <topico>Primefaces</topico>
-                <topico>JPA</topico>
-                <topico>Weblogic 12.1.1</topico>
-                <topico>Oracle 12c</topico>
-                <topico>Ambientes:
-
-                    <topico>Desenvolvimento (Nuvem)</topico>
-                    <topico>Homologação</topico>
-                    <topico>Produção</topico>
-
+                <titulo>Obrigado!</titulo>
+                <topico>Contatos:</topico>
+                <topico><i style="color:#1a6091;padding-right: 10px;" class="fa fa-twitter"></i>adrianopatrickc</topico>
+                <topico><i style="color:#000000;padding-right: 10px;" class="fa fa-github"></i>https://github.com/adrianopatrick
                 </topico>
-                <topico>Módulos: Internet, intranet, negócio, service</topico>
-
-            </section>
-            <section data-state="bg2">
-                <topico>Plataforma de Autenticação</topico>
-                <sub2>Serviços</sub2>
-
-                <topico>Gerar token para o Sat</topico>
-                <topico>Autenticar</topico>
-                <topico>Trocar senha</topico>
-                <br/>
-                <br/>
-                <br/>
-
-            </section>
-            <section data-state="bg2">
-                <topico>Gateway</topico>
-                <sub2>Desafios</sub2>
-
-                <topico>Tecnologia</topico>
-                <topico>Proficiência</topico>
-                <topico>Governança</topico>
-
-                <sub2>Desenvolvimento</sub2>
-
-                <topico>Tomcat</topico>
-                <topico>Spring Security</topico>
-                <topico>Jdk 1.7</topico>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-            </section>
-            <section data-state="bg2">
-                <topico>Meu INSS</topico>
-                <sub2>Desafios</sub2>
-
-                <topico>Lidar com tecnologia nova
-
-                    <topico>Sem padrão</topico>
-
-                </topico>
-                <topico>Lidar com técnicas novas
-
-                    <topico>UX</topico>
-                    <topico>Usabilidade</topico>
-                    <topico>Design</topico>
-
-                </topico>
-                <sub2>Tecnologia</sub2>
-                <topico>Javascript</topico>
-                <topico>CSS</topico>
-                <topico>HTML5</topico>
-
-                <br>
-                <br>
             </section>
 
-            <section>
-                <sub2>Javascript</sub2>
-                <sub3>functions as first class citizens</sub3>
-                <sub3>Callbacks</sub3>
-                <pre><code>
-    function montarMunicipios(uf) {
-        sistema.listamun = function (json) {
-            anima.desaparece();
-            var muni = "";
-            if (Array.isArray(json.municipioTO)) {
-                for (i = 0; i < json.municipioTO.length; i++) {
-                    muni += '<option value=' + json.municipioTO[i].codigo + '>' + json.municipioTO[i].nome;
-                }
-            } else {
-                muni += '<option value=' + json.municipioTO.codigo + '>' + json.municipioTO.nome;
-            }
-            document.getElementById('municipio').innerHTML = muni;
-        };
-        var mun = "uf/" + uf + "/municipio";
-        var request = {
-            param: mun,
-            chave: sistema.chave,
-            segredo: sistema.segredo,
-            callback: sistema.listamun
-        }
-        anima.aparecePorTipo('com-botoes-pesquisa');
-        custom_submit(request, false);
-    }
-                </code></pre>
-
-            </section>
-            <section>
-                <sub2>Css</sub2>
-                <sub3>Media Queries</sub3>
-                <sub3>Performance</sub3>
-                <pre><code>
-.mini, .fechado, .aberto, .abrindo {
-        transition: width 250ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
-        transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
-        overflow-scrolling: touch;
-        float: right;
-        position: relative;
-        height: 100%;
-        overflow: hidden;
-        z-index: 8;
-    }
-@media only screen and (min-width: 1700px) and (orientation: landscape) {}
-@media print{}
-                </code></pre>
-            </section>
-            <section>
-                <img src="coisograma.png" width="800px" alt="">
-            </section>
-            
-
-
-        </section>
-        <section>
-            <section data-state="bg2">
-                <titulo>Próximos Passos</titulo>
-                <subheader>RoadMap do produto: Idéias e Visão de Futuro</subheader>
-            </section>
-
-                <section data-state="bg2">
-                    <topico>Plataforma</topico>
-                    <sub2>Futuro</sub2>
-                    <topico>Expansão o uso da Plataforma por outros clientes</topico>
-                    <topico>Unificar a solução da Plataforma +Gateway</topico>
-                    <topico>Melhoria na interface</topico>
-                    <topico>Painel de gerenciamento da conta do cidadão</topico>
-                </section>
-
-                <section data-state="bg2">
-                    <topico>Meu Inss</topico>
-                    <sub2>Futuro</sub2>
-                    <topico>Agilidade na entrega de novas aplicações</topico>
-                    <topico>Migração para pilha React.js</topico>
-                    <topico>Integração contínua +Testes</topico>
-                    <topico>Notificações</topico>
-                    <topico>Serviços uificados ou resumo de cliente</topico>
-                    <topico>Interface para idoso</topico>                    
-                </section>
         </section>
 
 
@@ -1138,7 +701,7 @@
 
 <video id="bgvid" playsinline autoplay muted loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-    <source src="./img/2048-4.mp4" type="video/mp4">
+    <!--<source src="./img/2048-4.mp4" type="video/mp4"> -->
 </video>
 <div style="display: none">
     <section>
@@ -1228,6 +791,7 @@
         frame.classList.remove('tablet');
         frame.classList.remove('desktop2');
     }
+
     function update2(cv) {
         var aux = [];
         for (var j = 0; j < cv.data.datasets.length; j++) {
@@ -1248,6 +812,7 @@
         }, 500);
 
     }
+
     Reveal.addEventListener('slidechanged', function (event) {
 
         if (event.currentSlide.getElementsByTagName('canvas')[0] !== undefined) {
