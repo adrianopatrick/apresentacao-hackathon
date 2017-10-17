@@ -2792,6 +2792,16 @@
 
 		// Highlight fragment directions
 		if( currentSlide ) {
+			console.log(currentSlide.id)
+			if(currentSlide.id === "first") {
+				let component = document.getElementById('bgvid');
+				component.style = "background-image: url(\"img/jstips.gif\"); background-repeat: no-repeat; background-size: 100% 100%;";
+			}
+
+			if(currentSlide.id !== "first") {
+				let component = document.getElementById('bgvid');
+				component.style = "background-image: url(\"img/fortaleza.jpg\"); background-repeat: no-repeat; background-size: 100% 100%;";
+			}
 
 			// Always apply fragment decorator to prev/next buttons
 			if( fragments.prev ) dom.controlsPrev.forEach( function( el ) { el.classList.add( 'fragmented', 'enabled' ); el.removeAttribute( 'disabled' ); } );
